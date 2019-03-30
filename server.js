@@ -53,7 +53,8 @@ mongoose.Promise = global.Promise;
 
 
 app.set('view engine','ejs')
-app.set('views','views')
+app.set("views", path.join(__dirname, "views"));
+//app.set('views','views')
 app.use(cors());
 app.use(passport.initialize());
 mongoose.set('useCreateIndex', true);
